@@ -1,138 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <h1>Chúc mừng năm mới</h1>
-    <h2>Bạn sẽ lì xì cho Tùng chứ???</h2>
-    <img id="img1" src="vecteezy_2024-dragon-happy-new-year-vector_28545033.jpg" style="border-radius: 10px;" height="400px" width="500px">
-    <img id="img2" src="qr2.png" style="opacity: 0; position: absolute; top: 30px; left: 50%;" height="300px" width="300px">
-    <div class="button-container">
-        <button class="button-1" id="button1" role="button">Oke</button>
-        <button class="button-2" id="button2" role="button">Không</button>
-    </div>
+<meta charset="UTF-8">
+<title>Quiz Ôn Tập Không Dây</title>
 
-    <script>
-        document.getElementById("button2").addEventListener("mouseover", function() {
-            this.style.position = "absolute";
-            var randomX = Math.random() * (window.innerWidth - this.offsetWidth);
-            var randomY = Math.random() * (window.innerHeight - this.offsetHeight);
-            this.style.left = randomX + "px";
-            this.style.top = randomY + "px";
-        });
-
-        document.getElementById("button2").addEventListener("click", function() {
-            this.style.position = "absolute";
-            var randomX = Math.random() * (window.innerWidth - this.offsetWidth);
-            var randomY = Math.random() * (window.innerHeight - this.offsetHeight);
-            this.style.left = randomX + "px";
-            this.style.top = randomY + "px";
-        });
-
-        document.getElementById("button1").addEventListener("click", function() {
-            var img2 = document.getElementById("img2");
-            setTimeout(function() {
-            var startX = window.innerWidth;
-            var endX = (window.innerWidth - img2.offsetWidth) / 2;
-            var posY = (window.innerHeight - img2.offsetHeight) / 2;
-            var step = 5;
-            var delay = 8;
-            var currentX = startX;
-
-                var moveInterval = setInterval(function() {
-                    if (currentX > endX) {
-                        img2.style.left = currentX + "px";
-                        img2.style.top = posY + "px";
-                        currentX -= step;
-                    } else {
-                        clearInterval(moveInterval);
-                    }
-                }, delay);
-                setTimeout(function() {
-                    img2.style.opacity = "1";
-                }, 100);
-            },);
-        });
-    </script>
-</body>
 <style>
     body {
-        font-family: 'Roboto', sans-serif;
-    }
-    
-    h1{
-        text-align: center;
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background: #f2f2f2;
     }
 
-    h2{
-        text-align: center;
-    }
-    #img1{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    #img2{
-        display: inline-block;
-        margin-left: auto;
-        margin-right: auto;
-        z-index: 1;
+    .question-box {
+        background: #fff;
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.1);
     }
 
-    .button-container {
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    .button-1, .button-2 {
-        margin: 0 10px;
-        z-index: 0;
-    }
-
-    .button-1, .button-2 {
-        background-color: #EA4C89;
-        border-radius: 8px;
-        border-style: none;
-        box-sizing: border-box;
-        color: #FFFFFF;
+    .answers div {
+        background: #e8e8e8;
+        padding: 10px;
+        margin: 6px 0;
+        border-radius: 6px;
         cursor: pointer;
-        display: inline-block;
-        font-size: 14px;
-        font-weight: 500;
-        height: 40px;
-        line-height: 20px;
-        list-style: none;
-        outline: none;
-        padding: 10px 16px;
-        position: relative;
-        text-align: center;
-        text-decoration: none;
-        transition: color 100ms;
-        vertical-align: baseline;
-        user-select: none;
-        -webkit-user-select: none;
-        touch-action: manipulation;
-        transition: left 0.5s ease, top 0.5s ease, opacity 1s ease;
+        transition: 0.2s;
     }
 
-    .button-1:hover,
-    .button-1:focus {
-        background-color: #F082AC;
+    .correct-highlight {
+        background: yellow;
     }
 
-    .button-2 {
-        background-color: red;
+    .right {
+        background: lightgreen !important;
     }
 
-    .button-2:hover,
-    .button-2:focus {
-        background-color: #f34747;
+    .wrong {
+        background: #ff6b6b !important;
     }
-
 </style>
+</head>
+<body>
+
+<h2>Quiz Ôn Tập </h2>
+<p>Nhấp vào đáp án để kiểm tra đúng sai</p>
+
+<div style="margin-bottom: 15px;">
+  <button id="resetBtn" style="background: #2196F3; color: white; border: none; padding: 10px 15px; border-radius: 6px; cursor: pointer; font-size: 14px;">🔄 Làm Mới</button>
+</div>
+
+<div id="quiz-container"></div>
+
+<script src="question2.js"></script>
+
+<script>
+// Render câu hỏi
+function renderQuiz() {
+    const container = document.getElementById("quiz-container");
+    container.innerHTML = '';
+
+    if (!Array.isArray(quizData) || quizData.length === 0) {
+        container.innerHTML = "<p style='color:red;'>Không có dữ liệu câu hỏi</p>";
+        return;
+    }
+
+    quizData.forEach((q, index) => {
+        const isMulti = Array.isArray(q.correctIndex) && q.correctIndex.length > 1;
+        const needCount = isMulti ? q.correctIndex.length : 1;
+        let html = `<div class="question-box"><b>Câu ${index+1}: ${q.question}</b>`;
+        if (isMulti) html = `<div class="question-box"><b>Câu ${index+1}: ${q.question} <small style="color:#555"> (Chọn ${needCount} đáp án)</small></b>`;
+        if (q.image) {
+            html += `<div><img src="${q.image}" onerror="this.style.display='none'"></div>`;
+        }
+        html += `<div class="answers">`;
+        q.answers.forEach((ans, idx) => {
+            // xác định đúng cho cả số nguyên hoặc mảng
+            const isCorrect = Array.isArray(q.correctIndex) ? q.correctIndex.includes(idx) : q.correctIndex === idx;
+            html += `<div data-qid="${q.id ?? index}" data-index="${idx}" data-correct="${isCorrect}">${ans}</div>`;
+        });
+        html += `</div></div>`;
+        container.innerHTML += html;
+    });
+
+    // Xử lý click: toggle chọn/huỷ chọn; nếu đúng -> .right, sai -> .wrong
+    document.querySelectorAll(".answers div").forEach(el => {
+        el.addEventListener("click", function () {
+            // nếu đã có trạng thái thì bấm lại để xóa
+            if (this.classList.contains("right") || this.classList.contains("wrong")) {
+                this.classList.remove("right", "wrong");
+                return;
+            }
+            if (this.dataset.correct === "true") {
+                this.classList.add("right");
+            } else {
+                this.classList.add("wrong");
+            }
+        });
+    });
+}
+
+// Nếu quizData hợp lệ, khởi tạo displayData
+if (typeof quizData !== 'undefined' && Array.isArray(quizData)) {
+    // Hiển thị các câu hỏi theo thứ tự từ id 1 đến id 145
+    // Không trộn, chỉ sắp xếp theo thứ tự id
+} else {
+    quizData = []; // guard
+}
+renderQuiz();
+
+// Nút làm mới (xóa tất cả lựa chọn)
+document.getElementById('resetBtn').addEventListener('click', function() {
+    document.querySelectorAll(".answers div").forEach(el => {
+        el.classList.remove("right", "wrong");
+    });
+});
+</script>
+
+</body>
 </html>
