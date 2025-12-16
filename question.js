@@ -975,7 +975,7 @@ const quizData = [
             "c. Xóa dòng thứ hai trong bảng định tuyến, sau đó phát đi thông điệp RERR cảnh báo toàn mạng rằng tuyến đường tương ứng đã bị hỏng",
             "d. Phát đi thông điệp RERR cảnh báo toàn mạng rằng node 6 không còn là láng giềng của mình nữa"
         ],
-        correctIndex: 3
+        correctIndex: 1
     },
     {
         id: 88,
@@ -1019,7 +1019,7 @@ const quizData = [
             "c. Trường Sequence number có chức năng định đánh một tuyến đường, giúp phân biệt với những tuyến đường khác",
             "d. Giao thức AODV theo dõi quá trình truyền các message để khám phá và bảo trì tuyến đường"
         ],
-        correctIndex: 2
+        correctIndex: 3
     },
     {
         id: 92,
@@ -1089,6 +1089,7 @@ const quizData = [
         "correctIndex": 2
     },
 ];
+
 
 
 
