@@ -819,7 +819,7 @@ const quizData = [
             "c. Router mode",
             "d. Root mode"
         ],
-        correctIndex: 2
+        correctIndex: 3
     },
     {
         id: 74,
@@ -886,7 +886,7 @@ const quizData = [
             "c. Sau khi nghe và thấy đường truyền đang rảnh, trạm phát phải tiếp tục chờ thêm khoảng thời gian DIFS nếu dự định phát gói tin dữ liệu",
             "d. Khác với giao thức CSMA/CD của mạng hữu tuyến, CSMA/CA không yêu cầu trạm phát phải 'nghe' đường truyền trong khi phát tin"
         ],
-        correctIndex: 0
+        correctIndex: 3
     },
     {
         id: 80,
@@ -1089,6 +1089,7 @@ const quizData = [
         "correctIndex": 2
     },
 ];
+
 
 
 
