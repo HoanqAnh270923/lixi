@@ -110,7 +110,7 @@ const quizData = [
             "c. Việc B truyền tin cho A không ảnh hưởng tới việc C phát tin cho D",
             "d. Trong khi C đang phát tới D thì B bắt đầu muốn truyền cho A"
         ],
-        correctIndex: 1
+        correctIndex: 3
     },
     {
         id: 11,
@@ -1089,6 +1089,7 @@ const quizData = [
         "correctIndex": 2
     },
 ];
+
 
 
 
