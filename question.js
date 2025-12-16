@@ -683,7 +683,7 @@ const quizData = [
             "c. Xóa dòng thứ hai trong bảng định tuyến, sau đó phát đi thông điệp RERR cảnh báo toàn mạng rằng tuyến đường tương ứng đã bị hỏng",
             "d. Phát đi thông điệp RERR cảnh báo toàn mạng rằng node 2 không còn là láng giềng của mình nữa"
         ],
-        correctIndex: 3
+        correctIndex: 1
     },
     {
         id: 62,
@@ -1089,6 +1089,7 @@ const quizData = [
         "correctIndex": 2
     },
 ];
+
 
 
 
