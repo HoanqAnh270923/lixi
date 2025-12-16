@@ -694,7 +694,7 @@ const quizData = [
             "c. SpaceX là công ty đầu tiên nghĩ ra và cung cấp dịch vụ Internet không dây qua vệ tinh cho người dùng",
             "d. Mục tiêu là cung cấp kết nối Internet cho toàn thế giới thông qua vệ tinh"
         ],
-        correctIndex: [0,2,3]
+        correctIndex: 3
     },
     {
         id: 63,
@@ -1089,6 +1089,7 @@ const quizData = [
         "correctIndex": 2
     },
 ];
+
 
 
 
