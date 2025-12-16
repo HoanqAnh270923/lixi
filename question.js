@@ -761,7 +761,7 @@ const quizData = [
             "c. Là giao thức giải quyết vấn đề truy cập đường truyền ở tầng con MAC",
             "d. Là giao thức giải quyết vấn đề truy cập đường truyền trong các mạng không dây cự ly ngắn như mạng Wifi"
         ],
-        correctIndex: 1
+        correctIndex: 0
     },
     {
         id: 69,
@@ -784,7 +784,7 @@ const quizData = [
             "c. Là giao thức truy cập đường truyền, cùng hoạt động ở tầng con MAC như giao thức ALOHA",
             "d. Sau khi lắng nghe và thấy đường truyền đang rảnh, trạm phát sẽ áp dụng chiến thuật p-persistent và phát ngay gói tin với xác suất là p"
         ],
-        correctIndex: 3
+        correctIndex: 2
     },
     {
         id: 71,
@@ -941,7 +941,7 @@ const quizData = [
             "c. Là giao thức giải quyết vấn đề truy cập đường truyền ở tầng con MAC",
             "d. Là giao thức giải quyết vấn đề truy cập đường truyền trong các mạng không dây cự ly ngắn như mạng Wifi"
         ],
-        correctIndex: 1
+        correctIndex: 0
     },
     {
         id: 85,
@@ -986,7 +986,7 @@ const quizData = [
             "c. Là giao thức giải quyết vấn đề truy cập đường truyền ở tầng con MAC",
             "d. Là giao thức truy cập đường truyền, cùng hoạt động ở tầng con MAC như giao thức ALOHA"
         ],
-        correctIndex: 1
+        correctIndex: 3
     },
     {
         id: 89,
@@ -1089,4 +1089,5 @@ const quizData = [
         "correctIndex": 2
     },
 ];
+
 
