@@ -694,7 +694,7 @@ const quizData = [
             "c. SpaceX là công ty đầu tiên nghĩ ra và cung cấp dịch vụ Internet không dây qua vệ tinh cho người dùng",
             "d. Mục tiêu là cung cấp kết nối Internet cho toàn thế giới thông qua vệ tinh"
         ],
-        correctIndex: 3
+        correctIndex: [0,2,3]
     },
     {
         id: 63,
@@ -705,7 +705,7 @@ const quizData = [
             "c. Làm việc với họ chuẩn 802.11",
             "d. Sau khi nhận được gói tin và kiểm tra checksum thấy lỗi, trạm thu sẽ gửi lại ACK cho trạm phát"
         ],
-        correctIndex: 0
+        correctIndex: 3
     },
     {
         id: 64,
@@ -875,7 +875,7 @@ const quizData = [
             "c. Giao thức AODV theo dõi quá trình truyền các message để khám phá và bảo trì tuyến đường",
             "d. Khi một node có nhu cầu truyền dữ liệu và không tìm thấy node đích trong bảng định tuyến của mình, nó sẽ phát đi thông điệp RREP"
         ],
-        correctIndex: 3
+        correctIndex: 1
     },
     {
         id: 79,
@@ -1063,7 +1063,7 @@ const quizData = [
             "c. Sau khi nhận được CTS, trạm phát sẽ bắt đầu phát các gói tin",
             "d. Tương tự như giao thức CSMA/CD của mạng hữu tuyến, trạm thu của giao thức CSMA/CA cũng sử dụng thông điệp ACK để báo nhận tốt"
         ],
-        correctIndex: 2
+        correctIndex: 1
     },
     {
         id: 96,
@@ -1089,3 +1089,4 @@ const quizData = [
         "correctIndex": 2
     },
 ];
+
