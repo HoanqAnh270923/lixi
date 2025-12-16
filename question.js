@@ -761,7 +761,7 @@ const quizData = [
             "c. Là giao thức giải quyết vấn đề truy cập đường truyền ở tầng con MAC",
             "d. Là giao thức giải quyết vấn đề truy cập đường truyền trong các mạng không dây cự ly ngắn như mạng Wifi"
         ],
-        correctIndex: 0
+        correctIndex: 1
     },
     {
         id: 69,
@@ -1089,6 +1089,7 @@ const quizData = [
         "correctIndex": 2
     },
 ];
+
 
 
 
