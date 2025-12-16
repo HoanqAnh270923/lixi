@@ -875,7 +875,7 @@ const quizData = [
             "c. Giao thức AODV theo dõi quá trình truyền các message để khám phá và bảo trì tuyến đường",
             "d. Khi một node có nhu cầu truyền dữ liệu và không tìm thấy node đích trong bảng định tuyến của mình, nó sẽ phát đi thông điệp RREP"
         ],
-        correctIndex: 1
+        correctIndex: 3
     },
     {
         id: 79,
@@ -1089,6 +1089,7 @@ const quizData = [
         "correctIndex": 2
     },
 ];
+
 
 
 
