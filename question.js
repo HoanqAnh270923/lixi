@@ -784,7 +784,7 @@ const quizData = [
             "c. Là giao thức truy cập đường truyền, cùng hoạt động ở tầng con MAC như giao thức ALOHA",
             "d. Sau khi lắng nghe và thấy đường truyền đang rảnh, trạm phát sẽ áp dụng chiến thuật p-persistent và phát ngay gói tin với xác suất là p"
         ],
-        correctIndex: 2
+        correctIndex: 3
     },
     {
         id: 71,
@@ -830,7 +830,7 @@ const quizData = [
             "c. Các nút mạng thường hoạt động theo giờ giấc của chủ nhân, nghĩa là chúng thường có một khoảng thời gian nghỉ ngơi trong ngày khi chủ nhân đi vắng hoặc ngủ",
             "d. Trong đa số trường hợp, các nút mạng là các máy tính cá nhân như máy tính để bàn, điện thoại thông minh hay smart tivi"
         ],
-        correctIndex: 3
+        correctIndex: 1
     },
     {
         id: 75,
@@ -986,7 +986,7 @@ const quizData = [
             "c. Là giao thức giải quyết vấn đề truy cập đường truyền ở tầng con MAC",
             "d. Là giao thức truy cập đường truyền, cùng hoạt động ở tầng con MAC như giao thức ALOHA"
         ],
-        correctIndex: 3
+        correctIndex: 1
     },
     {
         id: 89,
@@ -1089,5 +1089,6 @@ const quizData = [
         "correctIndex": 2
     },
 ];
+
 
 
