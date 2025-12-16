@@ -627,7 +627,7 @@ const quizData = [
             "c. Sử dụng giao thức CSMA/CA",
             "d. Mỗi node mạng hoạt động như một máy trạm (host) kiêm router, liên lạc với những node ở xa thông qua những node trung gian"
         ],
-        correctIndex: 2
+        correctIndex: 1
     },
     {
         id: 57,
@@ -698,7 +698,7 @@ const quizData = [
     },
     {
         id: 63,
-        question: "Mô tả nào về cơ chế thực hiện của giao thức CSMA/CA là sai?",
+        question: "",
         answers: [
             "a. Tương tự như giao thức CSMA/CD của mạng hữu tuyến, CSMA/CA yêu cầu trạm phát phải 'lắng nghe' để phát hiện sóng mang trước khi phát tin",
             "b. Là giao thức giải quyết vấn đề truy cập đường truyền trong mạng Wifi",
@@ -754,7 +754,7 @@ const quizData = [
     },
     {
         id: 68,
-        question: "Mô tả nào về cơ chế thực hiện của giao thức CSMA/CA là sai?",
+        question: "",
         answers: [
             "a. Là giao thức truy cập đường truyền, cũng hoạt động ở tầng con MAC như giao thức ALOHA",
             "b. Sau khi chờ hết khoảng thời gian SIFS, nếu đường truyền vẫn rảnh thì trạm phát sẽ phát các gói tin dữ liệu cho trạm thu",
@@ -941,7 +941,7 @@ const quizData = [
             "c. Là giao thức giải quyết vấn đề truy cập đường truyền ở tầng con MAC",
             "d. Là giao thức giải quyết vấn đề truy cập đường truyền trong các mạng không dây cự ly ngắn như mạng Wifi"
         ],
-        correctIndex: 0
+        correctIndex: 1
     },
     {
         id: 85,
@@ -1089,6 +1089,7 @@ const quizData = [
         "correctIndex": 2
     },
 ];
+
 
 
 
